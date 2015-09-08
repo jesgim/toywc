@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle Toy word count'
+      'command': 'toywc:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Toy word count'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'toywc:toggle'
+        }
+      ]
+    ]
+  }
+]
