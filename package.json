@@ -2,7 +2,7 @@
   "name": "toywc",
   "main": "./lib/toywc",
   "version": "0.0.0",
-  "description": "Wprd count toy package",
+  "description": "Word count toy package",
   "keywords": [
   ],
   "activationCommands": {
