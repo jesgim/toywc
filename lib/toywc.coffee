@@ -1,3 +1,4 @@
+Wc = require './wc'
 ToywcView = require './toywc-view'
 {CompositeDisposable} = require 'atom'
 
@@ -30,9 +31,8 @@ module.exports = Toywc =
     if @modalPanel.isVisible()
       @modalPanel.hide()
     else
-      editor = atom.workspace.getActiveTextEditor()
       words = 0
-      if editor
-        words = editor.getText().split(/\s+/).length
+      if editor = atom.workspace.getActiveTextEditor()
+        words = Wc.wordcount(editor.getText())
       @toywcView.setCount(words)
       @modalPanel.show()
